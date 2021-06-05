@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Admin Dashboard</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navigation">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-apple" aria-hidden="true"></i>
+                        </span>
+                        <span class="title"><h2>Brand Name</h2>  
+                        <div class="toggle d-none">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div></span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-home" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">Home</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-user" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">User</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-comments" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">Message</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-question-circle" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">Help</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-cog" aria-hidden="true"></i></span>
+                        <span class="title">Setting</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-key" aria-hidden="true"></i></span>
+                        <span class="title">Password</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-lock" aria-hidden="true"></i></span>
+                        <span class="title">Lock</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i>
+                        </span>
+                        <span class="title">Sign up</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div class="main">
+                <div class="topbar">
+                    <div class="toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                    <div class="search">
+                        <div class="search-box">
+                            <input type="text" placeholder="Type to search ..." />
+                            <div class="search-btn">
+                            <i class="fa fa-search"></i>
+                            </div>
+                            <div class="cancel-btn">
+                            <i class="fa fa-times"></i>
+                            </div>
+                            <div class="search-data"> </div>
+                        </div>
+                    </div>
+
+                    <div class="profile">
+                        <img src="img/Picture1.jpg" alt="">
+                    </div>
+                </div>
+
+                <div class="card-box">
+                    <div class="card">
+                        <div>
+                            <div class="number">215</div>
+                            <div class="card-name">Job</div>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-briefcase" aria-hidden="true"></i>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div>
+                            <div class="number">2813</div>
+                            <div class="card-name">Comments</div>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-comments" aria-hidden="true"></i>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div>
+                            <div class="number">$2,215</div>
+                            <div class="card-name">Earning</div>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-usd" aria-hidden="true"></i>
+                        </div>
+                    </div>
+        
+                    <div class="card">
+                        <div>
+                            <div class="number">200</div>
+                            <div class="card-name">Sales</div>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="detail">
+                    <div class="order-info">
+                        <div class="card">
+                            <h2>Recent Order</h2>
+                            <a href="#" class="btn">View All</a>
+                        </div>
+                        <table class="sticky">
+                            <thead>
+                                <tr>
+                                    <th>Name</th>
+                                    <th>Price</th>
+                                    <th>Payment</th>
+                                    <th>Status</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>PT. Indofood</td>
+                                    <td>$1200</td>
+                                    <td>Due</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Medco Energi</td>
+                                    <td>$800</td>
+                                    <td>Paid</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Indofood</td>
+                                    <td>$1200</td>
+                                    <td>Due</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Medco Energi</td>
+                                    <td>$800</td>
+                                    <td>Paid</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Astra International</td>
+                                    <td>$630</td>
+                                    <td>Due</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Hanjaya Mandala</td>
+                                    <td>$720</td>
+                                    <td>Paid</td>
+                                    <td><span class="status return">Return</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Kalbe Farma</td>
+                                    <td>$1600</td>
+                                    <td>Due</td>
+                                    <td><span class="status in-progres">In Progres</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Sumber Alfaria </td>
+                                    <td>$200</td>
+                                    <td>Paid</td>
+                                    <td><span class="status return">Return</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Indocement</td>
+                                    <td>$100</td>
+                                    <td>Paid</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Adaro Energy</td>
+                                    <td>$90</td>
+                                    <td>Paid</td>
+                                    <td><span class="status delivered">Delivered</span></td>
+                                </tr>
+
+
+                                <tr>
+                                    <td>PT. Bayan Resource</td>
+                                    <td>$1400</td>
+                                    <td>Due</td>
+                                    <td><span class="status pending">Pending</span></td>
+                                </tr>
+
+                                <tr>
+                                    <td>PT. Sumber Alfaria </td>
+                                    <td>$200</td>
+                                    <td>Paid</td>
+                                    <td><span class="status return">Return</span></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="cumstomer-info">
+                        <h2>Cumstomer</h2>
+                        <table class="sticky">
+                            <tbody>
+                                <tr>    
+                                    <td style="width: 60px;"><div class="img-box"><img src="img/img1.jpg" alt=""></div></td>
+                                    <td><h4>Edrea Leta L. <br><span>Italy</span></h4></td>
+                                </tr>
+                                <tr>    
+                                    <td style="width: 60px;"><div class="img-box"><img src="img/img2.jpg" alt=""></div></td>
+                                    <td><h4>Akalanka M. <br><span>Spain</span></h4></td>
+                                </tr>
+                                <tr>    
+                                    <td style="width: 60px;"><div class="img-box"><img src="img/img3.jpg" alt=""></div></td>
+                                    <td><h4>Felysia Inez  <br><span>Germany</span></h4></td>
+                                </tr>
+                                <tr>    
+                                    <td style="width: 60px;"><div class="img-box"><img src="img/img4.jpg" alt=""></div></td>
+                                    <td><h4>Jovanka L. <br><span>Indian</span></h4></td>
+                                </tr>
+                                <tr>    
+                                    <td style="width: 60px;"><div class="img-box"><img src="img/img5.jpg" alt=""></div></td>
+                                    <td><h4>Rachel S. <br><span>Japan</span></h4></td>
+                                </tr>
+                                <tr>    
+                                    <td style="width: 60px;"><div class="img-box"><img src="img/img6.jpg" alt=""></div></td>
+                                    <td><h4>Barra Rafeyfa <br><span>USA</span></h4></td>
+                                </tr>
+                                <tr>    
+                                    <td style="width: 60px;"><div class="img-box"><img src="img/img7.jpg" alt=""></div></td>
+                                    <td><h4>Elvan Aristides <br><span>Italy</span></h4></td>
+                                </tr>
+                                <tr>    
+                                    <td style="width: 60px;"><div class="img-box"><img src="img/img4.jpg" alt=""></div></td>
+                                    <td><h4>Jovanka L. <br><span>Japan</span></h4></td>
+                                </tr>
+                                <tr>    
+                                    <td style="width: 60px;"><div class="img-box"><img src="img/img5.jpg" alt=""></div></td>
+                                    <td><h4>Rachel S. <br><span>Indian</span></h4></td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+           
+            
+        </div>
+    </div>
+
+        
+
+    <script>
+        const toggle = document.querySelector('.container .main .topbar .toggle');
+        const main = document.querySelector('.container .main');
+        const navigation = document.querySelector('.container .navigation');
+        const title = document.querySelector('.container .navigation ul li a .title');
+        
+
+        toggle.onclick = function(){
+            main.classList.toggle('active');
+            navigation.classList.toggle('active');
+            title.classList.toggle('active');
+            searchBox.classList.toggle('toggle-active');
+        }
+
+        const search = document.querySelector('.container .main .topbar .search');
+        const searchBtn = document.querySelector('.container .main .topbar .search .search-box .search-btn');
+        const input = document.querySelector('.container .main .topbar .search .search-box input');
+        const cancelBtn = document.querySelector('.container .main .topbar .search .search-box .cancel-btn');
+        const searchBox = document.querySelector('.container .main .topbar .search .search-box');
+        const searchData = document.querySelector('.container .main .topbar .search .search-data');
+        
+        searchBtn.addEventListener("click", function(){
+            cancelBtn.classList.remove('active');
+           searchBtn.classList.remove('active');
+           searchBox.classList.remove('active');
+           input.classList.remove('active');
+           searchData.classList.remove('active');
+                if(input.value !=""){
+                    let values = input.value;
+                    searchData.innerHTML = "You Just type :" + "<span>" + values + "<span>";
+                }else{
+                    searchData.innerHTML = "";
+                }
+        });
+        cancelBtn.addEventListener("click", function(){
+           cancelBtn.classList.add('active');
+           searchBtn.classList.add('active');
+           searchBox.classList.add('active');
+           input.classList.add('active');
+           searchData.classList.add('active');
+           input.value ="";
+           searchData.innerHTML = "";
+        });
+    </script>
+</body>
+</html>

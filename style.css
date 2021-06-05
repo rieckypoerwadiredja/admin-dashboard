@@ -1,0 +1,573 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+.d-none {
+  display: none;
+}
+::-webkit-scrollbar-button {
+  height: 8px;
+}
+::-webkit-scrollbar {
+  width: 8px !important;
+  margin-right: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #999;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+}
+
+/* Navigation */
+.container .navigation {
+  position: fixed;
+  width: 60px;
+  height: 100%;
+  background-color: #003147;
+  transition: 0.5s;
+  overflow: hidden;
+}
+.container .navigation.active {
+  width: 300px;
+  transition: 0.5s;
+}
+.container .navigation ul {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+}
+.container .navigation ul li {
+  position: relative;
+  display: flex;
+  width: 100%;
+  list-style: none;
+}
+.container .navigation ul li:hover {
+  background-color: #03a9f4;
+}
+.container .navigation ul li:nth-child(1) {
+  margin-bottom: 20px;
+}
+.container .navigation ul li:nth-child(1) a .icon .fa {
+  font-size: 45px;
+  color: chartreuse;
+}
+.container .navigation ul li:nth-child(1):hover {
+  background-color: transparent;
+}
+.container .navigation ul li a {
+  width: 100%;
+  display: flex;
+  color: #fff;
+  text-decoration: none;
+}
+.container .navigation ul li a .icon {
+  display: block;
+  display: flex;
+  min-width: 60px;
+  height: 60px;
+  align-items: center;
+  justify-content: center;
+  line-height: 60px;
+}
+.container .navigation ul li a .icon i {
+  font-size: 24px;
+}
+.container .navigation ul li a .title {
+  display: block;
+  position: relative;
+  padding: 0 10px;
+  min-width: 60px;
+  height: 60px;
+  line-height: 60px;
+  white-space: nowrap;
+}
+
+/* Main */
+.container .main {
+  width: calc(100% - 60px);
+  min-height: 100vh;
+  left: 60px;
+  position: absolute;
+  background-color: #f5f5f5;
+  transition: 0.5s;
+}
+.container .main.active {
+  width: calc(100% - 300px);
+  right: 0;
+  left: 300px;
+  transition: 0.5s;
+}
+.container .main .topbar {
+  width: 100%;
+  height: 50px;
+  padding: 0 10px;
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 10px 10px;
+}
+.container .main .topbar .toggle {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  margin: 0 20px;
+  cursor: pointer;
+}
+.container .main .topbar .toggle span {
+  position: relative;
+  width: 20px;
+  height: 3px;
+  display: block;
+  margin: 3px 0;
+  background-color: #000;
+}
+.container .main .topbar .profile {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin: 0 20px;
+  cursor: pointer;
+  overflow: hidden;
+}
+.container .main .topbar .profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* Search bar */
+.container .main .topbar .search .search-box {
+  height: 33px;
+  width: 300px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  align-items: center;
+}
+.container .main .topbar .search .search-box.toggle-active {
+  width: 250px;
+}
+.container .main .topbar .search .search-box.active {
+  width: 20px;
+}
+.container .main .topbar .search .search-box input {
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  outline: none;
+  font-size: 15px;
+  font-weight: 500;
+  position: absolute;
+  opacity: 1;
+}
+.container .main .topbar .search .search-box input.active {
+  opacity: 0;
+  transition-delay: 0.3s;
+}
+.container .main .topbar .search .search-box .search-btn {
+  z-index: 2;
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  line-height: 25px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 5px;
+  color: #fff;
+  font-size: 12px;
+  background-color: #664aff;
+  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.container .main .topbar .search .search-box .search-btn.active {
+  right: 0px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.container .main .topbar .search .search-box .cancel-btn {
+  z-index: 0;
+  position: absolute;
+  right: -20px;
+  color: #664aff;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  cursor: pointer;
+}
+.container .main .topbar .search .search-box .cancel-btn.active {
+  right: 0px;
+  transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transform: rotate(720deg);
+}
+.container .main .topbar .search .search-data {
+  position: relative;
+  height: 20px;
+  width: 200px;
+  top: 30px;
+  display: flex;
+  justify-content: center;
+}
+.container .main .topbar .search .search-data.active {
+  width: 20px;
+}
+.container .main .topbar .search .search-data {
+  white-space: nowrap;
+  font-size: 10px;
+  font-weight: 500;
+  color: #000;
+}
+
+.container .main .card-box {
+  width: 100%;
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 20px;
+  gap: 20px;
+}
+.container .main .card-box .card {
+  position: relative;
+  background-color: #fff;
+  border-radius: 10px;
+  justify-content: space-between;
+  display: flex;
+  padding: 20px;
+  align-items: center;
+}
+.container .main .card-box .card .number {
+  position: relative;
+  font-size: 1.8em;
+  font-weight: 500;
+}
+.container .main .card-box .card .icon {
+  position: relative;
+  font-size: 2.2em;
+  color: #03a9f4;
+}
+.container .main .card-box .card .card-name {
+  font-size: 0.7rem;
+}
+.container .main .detail {
+  position: relative;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  padding: 20px;
+  width: 100%;
+  grid-gap: 20px;
+}
+.container .main .detail .order-info {
+  position: relative;
+  display: grid;
+  background-color: #fff;
+  min-height: 530px;
+  max-height: 550px;
+  padding: 20px;
+  overflow: hidden;
+}
+.container .main .detail .order-info .card {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.container .main .detail .order-info .card h2 {
+  font-weight: 600;
+}
+.btn {
+  padding: 5px 10px;
+  background-color: #03a9f4;
+  border-radius: 6px;
+  position: relative;
+  color: #fff;
+  text-decoration: none;
+}
+.container .main .detail .order-info table {
+  position: relative;
+  margin-top: 10px;
+  border-collapse: collapse;
+  width: 100%;
+  overflow: scroll;
+  min-height: 400px;
+  max-height: 430px;
+  display: block;
+}
+.container .main .detail .order-info table::-webkit-scrollbar {
+  max-width: 4px;
+}
+.container .main .detail .order-info table::-webkit-scrollbar-thumb {
+  background-color: #003147;
+  border-radius: 6px;
+}
+.container .main .detail .order-info table::-webkit-scrollbar-thumb:hover {
+  background-color: #023f5c;
+}
+.container .main .detail .order-info table.sticky th {
+  position: sticky;
+  top: 0;
+  background-color: #fff;
+  width: 100%;
+  z-index: 2;
+}
+.container .main .detail .order-info table thead th {
+  font-weight: 600;
+  padding: 9px 5px;
+  font-size: 0.8rem;
+}
+.container .main .detail .order-info table tbody td {
+  font-weight: 400;
+  padding: 9px 5px;
+  font-size: 0.8rem;
+}
+.container .main .detail .order-info table tr:last-child {
+  border: none;
+}
+.container .main .detail .order-info table thead tr:first-child {
+  cursor: default;
+}
+.container .main .detail .order-info table tr {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.container .main .detail .order-info table tbody tr:hover {
+  background-color: #03a9f4;
+  color: #fff;
+}
+.container .main .detail .order-info table tbody tr td:last-child,
+.container .main .detail .order-info table thead tr th:last-child {
+  text-align: right;
+}
+.container .main .detail .order-info table tbody tr td:nth-child(2),
+.container .main .detail .order-info table thead tr th:nth-child(2) {
+  text-align: right;
+  padding-right: 20px;
+}
+.container .main .detail .order-info table tbody tr td:nth-child(3),
+.container .main .detail .order-info table thead tr th:nth-child(3) {
+  text-align: center;
+}
+.status {
+  position: relative;
+  padding: 2px 5px;
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+.pending {
+  background-color: #f9ca3f;
+}
+.delivered {
+  background-color: #8de02c;
+}
+.return {
+  background-color: #f00;
+}
+.in-progres {
+  background-color: #1795ce;
+  font-size: 11.1px;
+  padding: 3px 5px;
+}
+.container .main .detail .cumstomer-info {
+  position: relative;
+  display: grid;
+  width: 100%;
+  min-height: 500px;
+  max-height: 530px;
+  display: block;
+  padding: 20px 10px;
+  background-color: #fff;
+}
+.container .main .detail .cumstomer-info h2 {
+  font-weight: 600;
+}
+.container .main .detail .cumstomer-info table {
+  width: 100%;
+  overflow: scroll;
+  display: block;
+  overflow-x: hidden;
+  height: 450px;
+  margin-top: 10px;
+}
+/* Scroll */
+.container .main .detail .cumstomer-info table::-webkit-scrollbar {
+  max-width: 4px;
+}
+.container .main .detail .cumstomer-info table::-webkit-scrollbar-thumb {
+  background-color: #003147;
+  border-radius: 6px;
+}
+.container .main .detail .cumstomer-info table::-webkit-scrollbar-thumb:hover {
+  background-color: #023f5c;
+}
+.container .main .detail .cumstomer-info table tbody {
+  width: 100%;
+  display: block;
+}
+.container .main .detail .cumstomer-info table tr {
+  width: 100%;
+  display: flex;
+  display: block;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+.container .main .detail .cumstomer-info table tr:hover {
+  background-color: #03a9f4;
+  color: #fff;
+}
+.container .main .detail .cumstomer-info table tr:hover span {
+  color: #fff;
+}
+.container .main .detail .cumstomer-info table tr .img-box {
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.container .main .detail .cumstomer-info table tr .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+.container .main .detail .cumstomer-info table tr td h4 {
+  font-size: 12px;
+  font-weight: 500;
+}
+.container .main .detail .cumstomer-info table tr td h4 span {
+  font-style: italic;
+  font-size: 12px;
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .container .main {
+    left: 60pxpx;
+  }
+  .container .navigation.active {
+    width: 200px;
+    transition: 0.5s;
+  }
+
+  .container .main.active {
+    width: calc(100% - 200px);
+    left: 200px;
+  }
+  .container .main .card-box {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .container .navigation ul li a {
+    font-size: 15px;
+  }
+  .container .navigation ul li .title h2 {
+    font-size: 18px;
+  }
+  .container .main.active .detail {
+    grid-template-columns: 2, 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .container .main .detail {
+    grid-template-columns: 1fr;
+  }
+  .container .main .topbar .search .search-box {
+    width: 200px;
+  }
+  .container .main .topbar .search .search-box.toggle-active {
+    width: 200px;
+  }
+}
+@media (max-width: 480px) {
+  .container .main .card-box {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .container .main .detail {
+    grid-template-columns: 1fr;
+  }
+  .container .main .detail .order-info {
+    overflow: auto;
+  }
+  .container .main {
+    width: 100%;
+    left: 0;
+  }
+  .container .main .detail .order-info table {
+    width: 600px;
+  }
+  .container .main .detail .order-info .card {
+    position: relative;
+    display: flex;
+    justify-content: left;
+    align-items: flex-start;
+  }
+  .container .main .detail .order-info .card a {
+    margin-left: 50px;
+  }
+  .container .main .detail .order-info table tbody tr td:nth-child(2),
+  .container .main .detail .order-info table thead tr th:nth-child(2) {
+    padding-right: 100px;
+  }
+  .container .main .detail .order-info table tbody tr td:nth-child(3),
+  .container .main .detail .order-info table thead tr th:nth-child(3) {
+    text-align: center;
+    padding-right: 50px;
+  }
+  .container .main .topbar .search .search-box {
+    width: 150px;
+  }
+  .container .main .topbar .search .search-box.toggle-active {
+    width: 150px;
+  }
+  .container .navigation {
+    width: 100%;
+    left: -100%;
+    z-index: 1000;
+  }
+  .container .navigation.active {
+    width: 100%;
+    left: 0;
+  }
+  .container .navigation ul li a .title {
+    display: flex;
+  }
+  .container .navigation ul li a .title .toggle {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    margin: 0 20px;
+    cursor: pointer;
+    display: block;
+    margin-top: 20px;
+    right: -50%;
+  }
+  .container .navigation ul li a .title .toggle span {
+    position: relative;
+    width: 20px;
+    height: 3px;
+    display: block;
+    margin: 3px 0;
+    background-color: #fff;
+  }
+}
