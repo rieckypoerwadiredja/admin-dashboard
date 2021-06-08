@@ -316,6 +316,13 @@
             title.classList.toggle('active');
             searchBox.classList.toggle('toggle-active');
         }
+        const toggle2 = document.querySelector('.container .navigation ul li a .toggle');
+        toggle2.onclick = function(){
+            main.classList.toggle('active');
+            navigation.classList.toggle('active');
+            title.classList.toggle('active');
+            searchBox.classList.toggle('toggle-active');
+        }
 
         const search = document.querySelector('.container .main .topbar .search');
         const searchBtn = document.querySelector('.container .main .topbar .search .search-box .search-btn');
